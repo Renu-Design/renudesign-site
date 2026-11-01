@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Renu Design — Thoughtful Software for Everyday Life</title>
-  <meta name="description" content="Renu Design is a software studio that builds practical, well-crafted apps. Makers of Heapr, the home inventory app for iOS and Android.">
+  <meta name="description" content="Renu Design is a Toronto software studio building small, focused apps: Kanakku, Muster Hall, Heapr, Simple Tempo Metronome and doit.">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -167,6 +167,19 @@
       text-decoration: none;
     }
 
+
+    /* Product list */
+    .product-list { display: flex; flex-direction: column; gap: 1.5rem; }
+    .product-card { scroll-margin-top: 1.5rem; transition: box-shadow 0.15s, transform 0.15s; }
+    .product-card:hover { box-shadow: 0 6px 20px rgba(0,0,0,0.08); transform: translateY(-2px); }
+    .product-card:target { box-shadow: 0 0 0 2px #C4784A, 0 6px 20px rgba(0,0,0,0.08); }
+    .product-platform {
+      display: inline-block; vertical-align: middle; margin-left: 0.5rem;
+      font-size: 0.75rem; font-weight: 500; color: #6B6560;
+      background: #F3F1ED; border-radius: 999px; padding: 0.15rem 0.65rem;
+    }
+    .product-info .product-tagline { color: #1A1A1A; font-weight: 600; margin-bottom: 0.4rem; }
+
     /* About */
     .about-grid {
       display: grid;
@@ -247,18 +260,58 @@
 
   <div class="hero">
     <h1>Thoughtful software for everyday life</h1>
-    <p>Renu Design is a software studio focused on building practical, well-crafted applications that help people organize and simplify their daily lives.</p>
+    <p>Renu Design is a software studio building small, focused apps for groups, classrooms, homes and makers. Each one does one job well.</p>
   </div>
 
   <hr class="divider">
 
   <section id="products">
     <h2 class="section-title">Our Products</h2>
-    <div class="product-card">
-      <div class="product-icon">H</div>
+    <div class="product-list">
+    <article class="product-card" id="kanakku">
+      <div class="product-icon" style="background:#C4784A">K</div>
       <div class="product-info">
-        <h3>Heapr</h3>
-        <p>A home inventory app that helps you catalog what you own and where it lives. Whether you're tracking belongings across rooms, managing storage, or just want to know what you have — Heapr makes it simple.</p>
+        <h3>Kanakku <span class="product-platform">Web</span></h3>
+        <p class="product-tagline">The money book for your group.</p>
+        <p>For whoever books the courts, buys the birdies and chases everyone at the end of the month. Kanakku keeps the accounts, so every balance is right and everyone can see why.</p>
+        <ul class="product-features">
+          <li>Type it in plain words: “4 birdies at 2.50”</li>
+          <li>Every change shown before it’s saved</li>
+          <li>Costs split fair to the cent</li>
+          <li>One share link, no app or sign-up for players</li>
+          <li>WhatsApp reminders in one tap</li>
+          <li>Season passes and drop-ins</li>
+        </ul>
+        <div class="store-links">
+          <a href="https://app.kanakku.workers.dev" class="store-link">Open Kanakku</a>
+        </div>
+      </div>
+    </article>
+    <article class="product-card" id="musterhall">
+      <div class="product-icon" style="background:#5E7D6B">M</div>
+      <div class="product-info">
+        <h3>Muster Hall <span class="product-platform">Web</span></h3>
+        <p class="product-tagline">Take the roll. Then teach.</p>
+        <p>Attendance for teachers and instructors. Open today’s class on your phone, tap through the names, tag who was late or forgot their gear, and get back to your students.</p>
+        <ul class="product-features">
+          <li>One-tap roll call on your phone</li>
+          <li>Tags and notes on every student</li>
+          <li>Belts, grades and levels</li>
+          <li>A weekly page that flags who’s slipping</li>
+          <li>Drop-ins and make-up classes</li>
+          <li>We set up your classes for you</li>
+        </ul>
+        <div class="store-links">
+          <a href="https://musterhall.app" class="store-link">Visit Muster Hall</a>
+        </div>
+      </div>
+    </article>
+    <article class="product-card" id="heapr">
+      <div class="product-icon" style="background:#B5654A">H</div>
+      <div class="product-info">
+        <h3>Heapr <span class="product-platform">iOS · Android</span></h3>
+        <p class="product-tagline">Know what you own and where it lives.</p>
+        <p>A home inventory app for tracking belongings across rooms, managing storage, or just knowing what you have.</p>
         <ul class="product-features">
           <li>Catalog items with photos</li>
           <li>Organize by location</li>
@@ -267,10 +320,46 @@
           <li>Search across everything</li>
           <li>iOS and Android</li>
         </ul>
+      </div>
+    </article>
+    <article class="product-card" id="tempo">
+      <div class="product-icon" style="background:#3F5C78">T</div>
+      <div class="product-info">
+        <h3>Simple Tempo Metronome <span class="product-platform">iOS</span></h3>
+        <p class="product-tagline">Keep perfect time, nothing else.</p>
+        <p>A distraction-free metronome for musicians, dancers, walkers and workouts. Just tap play and go.</p>
+        <ul class="product-features">
+          <li>Pendulum animated in sync with every beat</li>
+          <li>Drag to set 60–200 BPM</li>
+          <li>Four sounds, from wood block to boxing bell</li>
+          <li>Haptic beats</li>
+          <li>Saved presets with custom names</li>
+          <li>Collects no data</li>
+        </ul>
         <div class="store-links">
-          <a href="https://heapr.app" class="store-link">Learn More</a>
+          <a href="https://apps.apple.com/ca/app/simple-tempo-metronome/id6757973064" class="store-link">Download on the App Store</a>
         </div>
       </div>
+    </article>
+    <article class="product-card" id="doit">
+      <div class="product-icon" style="background:#4A4744">d</div>
+      <div class="product-info">
+        <h3>doit <span class="product-platform">Terminal</span></h3>
+        <p class="product-tagline">Kanban for your terminal.</p>
+        <p>Your todos live in a single markdown file in a git repo you control. A keyboard-driven board renders it and commits every change. No database.</p>
+        <ul class="product-features">
+          <li>Kanban board in the terminal</li>
+          <li>Tasks stored as plain markdown</li>
+          <li>Every change committed to git</li>
+          <li>Push to any remote, when you want</li>
+          <li>Keyboard-driven</li>
+          <li>Open source, MIT licensed</li>
+        </ul>
+        <div class="store-links">
+          <a href="https://github.com/vj--/doit" class="store-link">View on GitHub</a>
+        </div>
+      </div>
+    </article>
     </div>
   </section>
 
@@ -289,7 +378,7 @@
       </div>
       <div class="about-card">
         <h3>Technology</h3>
-        <p>Our apps are built with modern cross-platform frameworks, allowing us to deliver native experiences on iOS and Android from a single codebase while maintaining high performance.</p>
+        <p>We pick the right tool for each product: native Swift on iOS, cross-platform mobile where it fits, lightweight web apps on the edge, and Go for the terminal.</p>
       </div>
       <div class="about-card">
         <h3>Based in</h3>
