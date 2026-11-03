@@ -180,6 +180,9 @@
     }
     .product-info .product-tagline { color: #1A1A1A; font-weight: 600; margin-bottom: 0.4rem; }
 
+    .product-icon--img { background: none; overflow: hidden; }
+    .product-icon--img img { width: 100%; height: 100%; display: block; }
+
     /* About */
     .about-grid {
       display: grid;
@@ -288,7 +291,7 @@
       </div>
     </article>
     <article class="product-card" id="musterhall">
-      <div class="product-icon" style="background:#5E7D6B">M</div>
+      <div class="product-icon product-icon--img"><img src="/img/musterhall.svg" alt="Muster Hall logo" width="80" height="80"></div>
       <div class="product-info">
         <h3>Muster Hall <span class="product-platform">Web</span></h3>
         <p class="product-tagline">Take the roll. Then teach.</p>
@@ -307,7 +310,7 @@
       </div>
     </article>
     <article class="product-card" id="heapr">
-      <div class="product-icon" style="background:#B5654A">H</div>
+      <div class="product-icon product-icon--img"><img src="/img/heapr.png" alt="Heapr logo" width="80" height="80"></div>
       <div class="product-info">
         <h3>Heapr <span class="product-platform">iOS · Android</span></h3>
         <p class="product-tagline">Know what you own and where it lives.</p>
