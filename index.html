@@ -10,13 +10,15 @@
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: #F3F1ED;
-      color: #1A1A1A;
+      background: #F7EFD2;
+      color: #1E2A1F;
       line-height: 1.6;
     }
 
-    a { color: #C4784A; text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    a { color: #2C5F2D; text-decoration: none; }
+    a:hover { text-decoration: underline; text-decoration-color: #FF69B4; text-underline-offset: 3px; }
+    :focus-visible { outline: 2px solid #FF69B4; outline-offset: 2px; }
+    ::selection { background: #FF69B4; color: #1E2A1F; }
 
     /* Nav */
     nav {
@@ -31,15 +33,16 @@
     .nav-logo {
       font-size: 1.25rem;
       font-weight: 700;
-      color: #1A1A1A;
+      color: #1E2A1F;
       text-decoration: none;
     }
 
-    .nav-logo span { color: #C4784A; }
+    .nav-logo span { color: #2C5F2D; }
+    .nav-logo::after { content: ""; display: inline-block; width: 6px; height: 6px; margin-left: 3px; border-radius: 50%; background: #FF69B4; }
 
     .nav-links { display: flex; gap: 1.5rem; font-size: 0.95rem; }
-    .nav-links a { color: #6B6560; }
-    .nav-links a:hover { color: #C4784A; }
+    .nav-links a { color: #4A5A4B; }
+    .nav-links a:hover { color: #2C5F2D; }
 
     /* Hero */
     .hero {
@@ -58,7 +61,7 @@
 
     .hero p {
       font-size: 1.2rem;
-      color: #6B6560;
+      color: #4A5A4B;
       max-width: 520px;
       margin: 0 auto;
     }
@@ -79,14 +82,14 @@
 
     .divider {
       border: none;
-      border-top: 1px solid #DDD9D3;
+      border-top: 1px solid #DDD0A4;
       max-width: 900px;
       margin: 0 auto;
     }
 
     /* Product card */
     .product-card {
-      background: #FFFFFF;
+      background: #FFFAEB;
       border-radius: 12px;
       padding: 2.5rem;
       box-shadow: 0 1px 3px rgba(0,0,0,0.06);
@@ -98,7 +101,7 @@
     .product-icon {
       width: 80px;
       height: 80px;
-      background: #C4784A;
+      background: #2C5F2D;
       border-radius: 18px;
       display: flex;
       align-items: center;
@@ -118,7 +121,7 @@
     }
 
     .product-info p {
-      color: #6B6560;
+      color: #4A5A4B;
       margin-bottom: 1rem;
     }
 
@@ -131,7 +134,7 @@
 
     .product-features li {
       font-size: 0.95rem;
-      color: #4A4744;
+      color: #3A483B;
       padding-left: 1.2rem;
       position: relative;
     }
@@ -140,7 +143,7 @@
       content: "\2713";
       position: absolute;
       left: 0;
-      color: #C4784A;
+      color: #2C5F2D;
       font-weight: 600;
     }
 
@@ -154,16 +157,16 @@
     .store-link {
       display: inline-block;
       padding: 0.5rem 1.25rem;
-      border: 1.5px solid #C4784A;
+      border: 1.5px solid #2C5F2D;
       border-radius: 8px;
-      color: #C4784A;
+      color: #2C5F2D;
       font-weight: 500;
       transition: background 0.15s, color 0.15s;
     }
 
     .store-link:hover {
-      background: #C4784A;
-      color: #fff;
+      background: #2C5F2D;
+      color: #FFFAEB;
       text-decoration: none;
     }
 
@@ -172,13 +175,13 @@
     .product-list { display: flex; flex-direction: column; gap: 1.5rem; }
     .product-card { scroll-margin-top: 1.5rem; transition: box-shadow 0.15s, transform 0.15s; }
     .product-card:hover { box-shadow: 0 6px 20px rgba(0,0,0,0.08); transform: translateY(-2px); }
-    .product-card:target { box-shadow: 0 0 0 2px #C4784A, 0 6px 20px rgba(0,0,0,0.08); }
+    .product-card:target { box-shadow: 0 0 0 2px #FF69B4, 0 6px 20px rgba(0,0,0,0.08); }
     .product-platform {
       display: inline-block; vertical-align: middle; margin-left: 0.5rem;
-      font-size: 0.75rem; font-weight: 500; color: #6B6560;
-      background: #F3F1ED; border-radius: 999px; padding: 0.15rem 0.65rem;
+      font-size: 0.75rem; font-weight: 500; color: #4A5A4B;
+      background: #EDE2BA; border-radius: 999px; padding: 0.15rem 0.65rem;
     }
-    .product-info .product-tagline { color: #1A1A1A; font-weight: 600; margin-bottom: 0.4rem; }
+    .product-info .product-tagline { color: #1E2A1F; font-weight: 600; margin-bottom: 0.4rem; }
 
     .product-icon--img { background: none; overflow: hidden; }
     .product-icon--img img { width: 100%; height: 100%; display: block; }
@@ -191,7 +194,7 @@
     }
 
     .about-card {
-      background: #FFFFFF;
+      background: #FFFAEB;
       border-radius: 12px;
       padding: 1.75rem;
       box-shadow: 0 1px 3px rgba(0,0,0,0.06);
@@ -204,7 +207,7 @@
     }
 
     .about-card p {
-      color: #6B6560;
+      color: #4A5A4B;
       font-size: 0.95rem;
     }
 
@@ -215,7 +218,7 @@
     }
 
     .contact-section p {
-      color: #6B6560;
+      color: #4A5A4B;
       margin-bottom: 0.75rem;
     }
 
@@ -233,12 +236,12 @@
       justify-content: space-between;
       align-items: center;
       font-size: 0.85rem;
-      color: #A39E98;
+      color: #56634F;
     }
 
     .footer-links { display: flex; gap: 1.5rem; }
-    .footer-links a { color: #A39E98; }
-    .footer-links a:hover { color: #C4784A; }
+    .footer-links a { color: #56634F; }
+    .footer-links a:hover { color: #2C5F2D; }
 
     /* Responsive */
     @media (max-width: 640px) {
@@ -272,7 +275,7 @@
     <h2 class="section-title">Our Products</h2>
     <div class="product-list">
     <article class="product-card" id="kanakku">
-      <div class="product-icon" style="background:#C4784A">K</div>
+      <div class="product-icon" style="background:#2C5F2D">K</div>
       <div class="product-info">
         <h3>Kanakku <span class="product-platform">Web</span></h3>
         <p class="product-tagline">The money book for your group.</p>
@@ -326,7 +329,7 @@
       </div>
     </article>
     <article class="product-card" id="tempo">
-      <div class="product-icon" style="background:#3F5C78">T</div>
+      <div class="product-icon" style="background:#3E7A47">T</div>
       <div class="product-info">
         <h3>Simple Tempo Metronome <span class="product-platform">iOS</span></h3>
         <p class="product-tagline">Keep perfect time, nothing else.</p>
@@ -345,7 +348,7 @@
       </div>
     </article>
     <article class="product-card" id="doit">
-      <div class="product-icon" style="background:#4A4744">d</div>
+      <div class="product-icon" style="background:#3A483B">d</div>
       <div class="product-info">
         <h3>doit <span class="product-platform">Terminal</span></h3>
         <p class="product-tagline">Kanban for your terminal.</p>
